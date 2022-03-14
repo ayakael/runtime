@@ -178,6 +178,7 @@
 
     <!-- There are no non-portable builds for Ilasm, Ildasm, ILC etc. -->
     <ToolsRID Condition="'$(PortableBuild)' != 'true' and '$(_portableOS)' == 'linux'">linux-$(_hostArch)</ToolsRID>
+    <ToolsRID Condition="'$(PortableBuild)' != 'true' and '$(_portableOS)' == 'linux-musl'">linux-musl-$(_hostArch)</ToolsRID>
     <ToolsRID Condition="'$(ToolsRID)' == ''">$(_toolsRID)</ToolsRID>
     <MicrosoftNetCoreIlasmPackageRuntimeId>$(ToolsRID)</MicrosoftNetCoreIlasmPackageRuntimeId>
 

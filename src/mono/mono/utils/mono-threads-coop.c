@@ -16,6 +16,9 @@
 #define _DARWIN_C_SOURCE
 #endif
 
+// workaround for https://github.com/dotnet/runtime/issues/82269
+#undef _FORTIFY_SOURCE
+
 #include <mono/utils/mono-compiler.h>
 #include <mono/utils/mono-threads.h>
 #include <mono/utils/mono-tls.h>
